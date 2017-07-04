@@ -5,9 +5,11 @@ import {WorkspaceRoutingModule} from './workspace-routing.module';
 import { LeftNavComponent } from './left-nav/left-nav.component';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { FooterInfoComponent } from './footer-info/footer-info.component';
+import {PanelMenuModule} from 'primeng/primeng';
 
 @NgModule({
-  imports: [WorkspaceRoutingModule
+  imports: [WorkspaceRoutingModule,
+    PanelMenuModule
   ],
   declarations: [WorkspaceDefultComponent, LeftNavComponent, TopMenuComponent, FooterInfoComponent]
 })

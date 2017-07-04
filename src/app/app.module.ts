@@ -7,6 +7,10 @@ import {LoginComponent} from './login/login.component';
 import {AppRoutingModule} from './app-routing.module';
 import {AuthGuardService} from './service/authGuardService/auth-guard.service';
 import {AuthService} from './service/authService/auth.service';
+import {AccordionModule, ButtonModule, InputTextModule, PanelMenuModule} from 'primeng/primeng';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +22,13 @@ import {AuthService} from './service/authService/auth.service';
     BrowserModule,
     WorkspaceModule,
     AppRoutingModule,
+    AccordionModule,
+    PanelMenuModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpModule,
+    InputTextModule,
+    ButtonModule
 
   ],
   providers: [AuthGuardService,
