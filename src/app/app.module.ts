@@ -1,16 +1,28 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './appdefult/app.component';
+import {WorkspaceModule} from './workspace/workspace.module';
+import {LoginComponent} from './login/login.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AuthGuardService} from './service/authGuardService/auth-guard.service';
+import {AuthService} from './service/authService/auth.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    WorkspaceModule,
+    AppRoutingModule,
+
   ],
-  providers: [],
+  providers: [AuthGuardService,
+    AuthService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
